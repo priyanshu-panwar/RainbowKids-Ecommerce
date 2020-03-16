@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content  %}
+    <h2 style="color: #1c7430;"><b>Thankyou for choosing our services</b></h2>
+
+<h2>Payment status regarding your order ID : <b>{{ response.ORDERID }}</b></h2>
+<hr>
+{% if response.RESCODE == '01' %}
+<strong>{{ response.RESPMSG }}</strong>
+{% else %}
+<strong>{{ response.RESPMSG }}</strong>
+{% endif %}
+
+{% endblock %}
+
+

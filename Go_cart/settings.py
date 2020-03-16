@@ -10,13 +10,14 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
-EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER =  'kushvijay38@gmail.com'
-EMAIL_HOST_PASSWORD  = 'npbadzbszadholye'
-DEFAULT_FROM_EMAIL = 'Email Activation <kushvijay38@gmail.com>'
+SENDGRID_API_KEY = os.getenv('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')
+
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST_USER = 'kQ2qAfJsTt-zlPBBfeMxPg'
+EMAIL_HOST_PASSWORD = SENDGRID_API_KEY
 EMAIL_PORT = 587
-#EMAIL_USE_SSL = False
+EMAIL_USE_TLS = True
+
 import os
 import django_heroku
 BASE_URL = 'https://therainbows.herokuapp.com' # '127.0.0.1:8000'  #
